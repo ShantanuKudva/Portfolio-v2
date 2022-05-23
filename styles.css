@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* variables */
+  --background-dark: black;
+  --color-light: #dddddd;
+  --terminal-color: #300a24;
+  --terminal-text: #79c431;
+  color: var(--color-light);
+  background-color: var(--background-dark);
+}
+
+.opening-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono";
+  height: 100vh;
+  opacity: 1;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.second-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Roboto Mono";
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 1;
+  padding: 10px;
+  background-color: var(--terminal-color);
+}
+
+.span-text {
+  color: var(--terminal-text);
+}
+
+.main-page-entry,
+.line-1,
+.line-2,
+.line-3,
+.line-4 {
+  opacity: 0;
+}
+
+.text-box {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: inherit;
+}
