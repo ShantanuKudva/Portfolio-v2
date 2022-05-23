@@ -12,12 +12,12 @@ body {
   --terminal-text: #79c431;
   color: var(--color-light);
   background-color: var(--background-dark);
+  /* overflow: hidden; */
 }
 
 .opening-page {
   position: relative;
   font-family: "Roboto Mono";
-  font-size: 7px;
   height: 100vh;
   opacity: 1;
   z-index: 1;
@@ -28,7 +28,7 @@ body {
   top: 0;
   left: 0;
   font-family: "Roboto Mono";
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   opacity: 0;
   transition: all 0.5s;
@@ -46,7 +46,10 @@ body {
 .line-2,
 .line-3,
 .line-4,
-.line-5 {
+.para-a,
+.para-b,
+.para-c,
+.para-d {
   opacity: 0;
   pointer-events: none;
 }
@@ -59,4 +62,34 @@ body {
   color: var(--color-light);
   text-decoration: none;
   font-size: inherit;
+}
+
+.third-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.7s;
+  height: 100vh;
+  background-color: black;
+  color: var(--color-light);
+  font-family: "Cedarville Cursive";
+  transition: all 1s;
+}
+
+.third-heading {
+  font-family: "Roboto Mono";
+  font-size: 4rem;
+}
+
+.third-footer {
+  font-size: 2rem;
+  /* transform: translateY(-2rem); */
 }

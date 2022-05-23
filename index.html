@@ -7,32 +7,45 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
     <title>Shantanu-Portfolio</title>
   </head>
   <body>
     <div class="opening-page">
-      <h1 class="opening-page_text">
-        <span class=""> 4.0 Release 6.0 </span><br />
+      <div class="para-a">
+        4.0 Release 6.0 <br />
         Copyright 1985-2000 Phoennix Technologies Ltd. <br />
         All Rights Reserved <br />
         <br />
+      </div>
+      <div class="para-b">
+        4.0 Release 6.0 <br />
+        Copyright 1985-2000 Phoennix Technologies Ltd. <br />
+        All Rights Reserved <br />
+        <br />
+      </div>
+      <div class="para-c">
         BIOS version 29.82 Gateway Solo 9550 <br />
         System ID = 00250850 <br />
-        Build Time: 09/10/01 09:09:52 <br />
+        Build Time: <span class="current-time">22/05/22 20:09:52</span> <br />
         <br />
+      </div>
+      <div class="para-d">
         CPU Intel(R) Mobile Pentium(R) III Processor-M 1066 MHz 254M Extended
         RAM Passed <br />
         639 KB Systen RAM Passed <br />
         512K Cache SRAM Passed <br />
         System BIOS shadowed <br />
         Video BIOS shadowed UMB upper linit segment address: E446 <br />
-      </h1>
+      </div>
     </div>
 
+    <!-- second-page -->
     <div class="second-page">
       <div class="second-page-text">
         <span class="span-text">terminal@YourWebPage</span>: Shantanu's terminal
@@ -48,7 +61,13 @@
         name and press enter key.
         <br />
         <span class="span-text">terminal@YourWebPage</span>:
-        <input autofocus spellcheck="false" type="text" class="text-box" />
+        <input
+          autofocus
+          spellcheck="false"
+          type="text"
+          id="textbox"
+          class="text-box"
+        />
       </div>
 
       <div class="line-1">
@@ -68,9 +87,12 @@
         <span class="span-text">terminal@YourWebPage</span>: Waiting for
         computer to display data. <br />
       </div>
+    </div>
 
-      <!-- Third-page -->
-      <div class="third-page"></div>
+    <!-- Third-page -->
+    <div class="third-page">
+      <h1 class="third-heading">< hello ></h1>
+      <h3 class="third-footer">Name</h3>
     </div>
     <script src="app.js"></script>
   </body>
