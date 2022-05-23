@@ -16,14 +16,10 @@ body {
 
 .opening-page {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: "Roboto Mono";
+  font-size: 7px;
   height: 100vh;
   opacity: 1;
-  transition: all 0.5s;
   z-index: 1;
 }
 
@@ -49,8 +45,10 @@ body {
 .line-1,
 .line-2,
 .line-3,
-.line-4 {
+.line-4,
+.line-5 {
   opacity: 0;
+  pointer-events: none;
 }
 
 .text-box {

@@ -3,9 +3,9 @@ const inputName = document.querySelector(".text-box");
 
 //event listeners
 window.addEventListener("load", () => {
-  setTimeout(removeIntro, 2000);
-  setTimeout(showSecond, 4000);
-  setTimeout(showTextBox, 5500);
+  setTimeout(removeIntro, 5000);
+  setTimeout(showSecond, 6500);
+  setTimeout(showTextBox, 7500);
 });
 
 document.querySelector(".text-box").addEventListener("keypress", (event) => {
@@ -14,6 +14,8 @@ document.querySelector(".text-box").addEventListener("keypress", (event) => {
     setTimeout(showLine2, 200);
     setTimeout(showLine3, 1000);
     setTimeout(showLine4, 2500);
+    setTimeout(showLine4, 2600);
+    setTimeout(removeSecond, 3500);
   }
 });
 
@@ -23,6 +25,12 @@ const showSecond = () => {
   document.querySelector(".second-page").style.pointerEvents = "all";
 };
 
+const removeSecond = () => {
+  document.querySelector(".second-page").style.opacity = 0;
+  document.querySelector(".second-page").style.pointerEvents = "none";
+  document.querySelector(".second-page").style.zIndex = -10;
+  // document.querySelector(".second-page").style.transition = "none";
+};
 const showTextBox = () => {
   document.querySelector(".main-page-entry").style.opacity = 1;
   document.querySelector(".main-page-entry").style.pointerEvents = "all";
