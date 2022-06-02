@@ -3,19 +3,20 @@ let inputName;
 
 //event listeners
 window.addEventListener("load", () => {
+  //shows the intro of the first page
   setTimeout(showLineA, 1000);
   setTimeout(showLineB, 2000);
   setTimeout(showLineC, 2700);
   setTimeout(showLineD, 4000);
   setTimeout(removeIntro, 5000);
   setTimeout(showSecond, 6500);
-  setTimeout(showTextBox, 7500);
+  setTimeout(showTextBox, 8000);
 });
 
 document.querySelector(".text-box").addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     inputName = document.getElementById("textbox").value;
-    console.log(inputName);
+    //shows the terminal messages
     setTimeout(showLine1, 50);
     setTimeout(showLine2, 200);
     setTimeout(showLine3, 1000);
@@ -24,6 +25,7 @@ document.querySelector(".text-box").addEventListener("keypress", (event) => {
     setTimeout(removeSecond, 3500);
     setTimeout(showThird, 4500);
     setTimeout(removeThird, 6000);
+    setTimeout(showFourth, 7500);
   }
 });
 
@@ -52,6 +54,17 @@ const removeThird = () => {
   document.querySelector(".third-page").style.pointerEvents = "none";
   document.querySelector(".third-page").style.zIndex = -10;
   // document.querySelector(".second-page").style.transition = "none";
+};
+
+//main page
+
+const showFourth = () => {
+  document.querySelector(".third-page").style.opacity = 0;
+  document.querySelector(".third-page").style.pointerEvents = "none";
+  document.querySelector(".third-page").style.zIndex = -1000;
+  document.querySelector(".main-page").style.opacity = 1;
+  document.querySelector(".main-page").style.pointerEvents = "all";
+  document.querySelector(".main-page").style.zIndex = 100;
 };
 const showTextBox = () => {
   document.querySelector(".main-page-entry").style.opacity = 1;

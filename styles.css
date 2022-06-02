@@ -10,6 +10,9 @@ body {
   --color-light: #dddddd;
   --terminal-color: #300a24;
   --terminal-text: #79c431;
+  --main-page-background: rgb(51, 51, 51);
+  --navbar-color: rgb(168, 166, 166);
+
   color: var(--color-light);
   background-color: var(--background-dark);
   /* overflow: hidden; */
@@ -86,10 +89,75 @@ body {
 
 .third-heading {
   font-family: "Roboto Mono";
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .third-footer {
   font-size: 2rem;
   /* transform: translateY(-2rem); */
+}
+
+/* main-page */
+
+.main-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  width: 100vw;
+  background-color: var(--main-page-background);
+  z-index: -100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all 0.8s ease;
+}
+
+.navbar {
+  position: absolute;
+  width: 100vw;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  opacity: 200;
+  background-color: var(--navbar-color);
+  border-radius: 3px;
+}
+
+.location {
+  justify-self: start;
+  margin-left: 1rem;
+}
+.time-date {
+  display: flex;
+  gap: 1rem;
+  justify-self: flex-end;
+  margin-right: 1rem;
+}
+.folders {
+  position: absolute;
+  top: 50vh;
+  left: 5vw;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 8rem;
+  z-index: inherit;
+}
+
+.folder {
+  transform: scale(3.5) translateY(2px);
+  transform-origin: 0;
+  fill: var(--navbar-color);
+}
+
+.folder-1,
+.folder-2,
+.folder-3 {
+  display: grid;
+  gap: 2rem;
 }
