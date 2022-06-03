@@ -83,17 +83,17 @@ body {
   height: 100vh;
   background-color: black;
   color: var(--color-light);
-  font-family: "Cedarville Cursive";
   transition: all 1s;
 }
 
 .third-heading {
-  font-family: "Roboto Mono";
-  font-size: 3rem;
+  font-family: "Dancing Script";
+  font-size: 5rem;
 }
 
 .third-footer {
-  font-size: 2rem;
+  font-family: "Roboto Mono";
+  font-size: 1.5rem;
   /* transform: translateY(-2rem); */
 }
 
@@ -115,6 +115,11 @@ body {
   transition: all 0.8s ease;
 }
 
+.background-image img {
+  pointer-events: none;
+  transform: scale(0.4);
+}
+
 .navbar {
   position: absolute;
   width: 100vw;
@@ -126,18 +131,72 @@ body {
   left: 0;
   opacity: 200;
   background-color: var(--navbar-color);
-  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+  font-family: "Roboto Mono";
 }
 
 .location {
-  justify-self: start;
-  margin-left: 1rem;
+  pointer-events: none;
+  justify-self: flex-start;
+  margin-left: 4rem;
 }
+.username {
+  pointer-events: none;
+  margin: auto;
+}
+
+.time {
+  border-right: solid black 0.2rem;
+  border-radius: 2px;
+  padding-right: 0.5rem;
+}
+
 .time-date {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: -10rem;
+}
+
+.computer-navbar {
+  position: relative;
   display: flex;
   gap: 1rem;
   justify-self: flex-end;
   margin-right: 1rem;
+  cursor: pointer;
+  transform: scale(0.05);
+  margin-right: -10rem;
+}
+
+.computer-navbar img {
+  /* transform: scale(0.05); */
+}
+
+.computer-info-dropdown {
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+  height: 20rem;
+  width: 10rem;
+  background-color: var(--navbar-color);
+  list-style: none;
+  position: absolute;
+  top: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  right: 2rem;
+}
+
+.computer-info-dropdown .close {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.7rem;
+  cursor: pointer;
+  pointer-events: all;
 }
 .folders {
   position: absolute;
@@ -153,6 +212,7 @@ body {
   transform: scale(3.5) translateY(2px);
   transform-origin: 0;
   fill: var(--navbar-color);
+  cursor: pointer;
 }
 
 .folder-1,
@@ -160,4 +220,9 @@ body {
 .folder-3 {
   display: grid;
   gap: 2rem;
+}
+
+.folder-name {
+  font-family: "Roboto Mono";
+  color: var(--navbar-color);
 }

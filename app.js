@@ -1,6 +1,32 @@
 //variables
 let inputName;
 
+let today = new Date();
+date =
+  today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
+
+const zeroFill = (n) => {
+  return ("0" + n).slice(-2);
+};
+
+// Creates interval
+const interval = setInterval(() => {
+  // Get current time
+  const now = new Date();
+
+  // Format date as in mm/dd/aaaa hh:ii:ss
+  let time =
+    zeroFill(now.getHours()) +
+    ":" +
+    zeroFill(now.getMinutes()) +
+    ":" +
+    zeroFill(now.getSeconds());
+
+  // Display the date and time on the screen using div#date-time
+  document.querySelector(".time").innerHTML = time;
+  document.querySelector(".date").innerHTML = date;
+}, 1000);
+
 //event listeners
 window.addEventListener("load", () => {
   //shows the intro of the first page
@@ -16,6 +42,7 @@ window.addEventListener("load", () => {
 document.querySelector(".text-box").addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     inputName = document.getElementById("textbox").value;
+    document.querySelector(".username").innerHTML = inputName;
     //shows the terminal messages
     setTimeout(showLine1, 50);
     setTimeout(showLine2, 200);
@@ -28,6 +55,21 @@ document.querySelector(".text-box").addEventListener("keypress", (event) => {
     setTimeout(showFourth, 7500);
   }
 });
+
+document.querySelector(".computer-navbar img").addEventListener("click", () => {
+  console.log("Click");
+  document.querySelector(".computer-info-dropdown").style.opacity = 1;
+});
+
+document
+  .querySelector(".computer-info-dropdown .close")
+  .addEventListener("click", () => {
+    console.log("Click");
+    document.querySelector(".computer-info-dropdown").style.opacity = 0;
+    document.querySelector(".computer-info-dropdown").style.pointerEvents =
+      "none";
+    document.querySelector(".computer-info-dropdown").style.cursor = "none";
+  });
 
 //funtions
 const showSecond = () => {
