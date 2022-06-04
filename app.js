@@ -57,20 +57,54 @@ document.querySelector(".text-box").addEventListener("keypress", (event) => {
 });
 
 document.querySelector(".computer-navbar img").addEventListener("click", () => {
-  console.log("Click");
   document.querySelector(".computer-info-dropdown").style.opacity = 1;
+  document.querySelector(".computer-info-dropdown .close").style.cursor =
+    "pointer";
 });
 
+//close portfolio
 document
   .querySelector(".computer-info-dropdown .close")
   .addEventListener("click", () => {
-    console.log("Click");
     document.querySelector(".computer-info-dropdown").style.opacity = 0;
+    document.querySelector(".computer-info-dropdown .close").style.cursor =
+      "default";
     document.querySelector(".computer-info-dropdown").style.pointerEvents =
       "none";
-    document.querySelector(".computer-info-dropdown").style.cursor = "none";
   });
 
+//add portfolio
+document.querySelector(".folder-1").addEventListener("click", () => {
+  document.querySelector(".portfolio").style.opacity = 1;
+  document.querySelector(".portfolio").style.zIndex = 100;
+  document.querySelector(".red").style.cursor = "pointer";
+  document.body.style.overflow = "unset";
+  document.body.style.overflowX = "hidden";
+});
+
+document.querySelector(".folder-2").addEventListener("click", () => {
+  document.querySelector(".portfolio").style.opacity = 1;
+  document.querySelector(".portfolio").style.zIndex = 100;
+  document.querySelector(".red").style.cursor = "pointer";
+  document.body.style.overflow = "unset";
+  document.body.style.overflowX = "hidden";
+});
+
+document.querySelector(".folder-3").addEventListener("click", () => {
+  document.querySelector(".portfolio").style.opacity = 1;
+  document.querySelector(".portfolio").style.zIndex = 100;
+  document.querySelector(".red").style.cursor = "pointer";
+  document.body.style.overflow = "unset";
+  document.body.style.overflowX = "hidden";
+});
+
+//remove portfolio
+document.querySelector(".red").addEventListener("click", () => {
+  document.querySelector(".portfolio").style.opacity = 0;
+  document.querySelector(".portfolio").style.zIndex = -100;
+  document.querySelector(".red").style.cursor = "default";
+  document.body.style.overflow = "hidden";
+});
 //funtions
 const showSecond = () => {
   document.querySelector(".second-page").style.opacity = 1;

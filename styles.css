@@ -4,18 +4,22 @@
   box-sizing: border-box;
 }
 
+/* after clicking on the pages, we need to hide only x direction overflow. so, we unset overflow and then add overflow-y to hidden */
+
 body {
   /* variables */
+  --portfolio-navbar-color: #2d2d2d;
+  --green: #68d245;
+  --red: #d3434e;
   --background-dark: black;
   --color-light: #dddddd;
   --terminal-color: #300a24;
   --terminal-text: #79c431;
   --main-page-background: rgb(51, 51, 51);
   --navbar-color: rgb(168, 166, 166);
-
+  overflow: hidden;
   color: var(--color-light);
   background-color: var(--background-dark);
-  /* overflow: hidden; */
 }
 
 .opening-page {
@@ -172,10 +176,6 @@ body {
   margin-right: -10rem;
 }
 
-.computer-navbar img {
-  /* transform: scale(0.05); */
-}
-
 .computer-info-dropdown {
   position: relative;
   opacity: 0;
@@ -195,9 +195,10 @@ body {
   position: absolute;
   top: 0.2rem;
   right: 0.7rem;
-  cursor: pointer;
+  cursor: default;
   pointer-events: all;
 }
+
 .folders {
   position: absolute;
   top: 50vh;
@@ -225,4 +226,114 @@ body {
 .folder-name {
   font-family: "Roboto Mono";
   color: var(--navbar-color);
+}
+
+/* portfolio */
+.portfolio {
+  overflow-y: unset;
+  opacity: 0;
+  z-index: -200;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  /* height: 100vh; */
+  width: 100vw;
+  transition: all 0.3s;
+}
+
+.portfolio-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--portfolio-navbar-color);
+  box-shadow: 0px 10px 80px -7px rgba(0, 0, 0, 0.75);
+  width: 100vw;
+  height: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.red {
+  cursor: pointer;
+  pointer-events: all;
+  margin-left: 1rem;
+  background-color: var(--red);
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+}
+
+.portfolio-navbar-text {
+  margin: auto;
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.portfolio-heading {
+  font-family: "Bodoni Moda";
+  margin: auto;
+  color: black;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-content {
+  margin-top: 2rem;
+  height: 100vh;
+  display: grid;
+  margin: 2rem 10rem;
+  padding: 1rem;
+}
+
+.right {
+  grid-template-columns: 30% 70%;
+}
+
+.left {
+  grid-template-columns: 70% 30%;
+}
+
+.portfolio-img,
+.portfolio-img-content {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 5px;
+  position: relative;
+  left: 50px;
+  top: 50px;
+}
+
+.portfolio-img {
+  border: 1px solid blue;
+}
+
+.portfolio-para {
+  color: rgb(51, 51, 51);
+  font-size: 1.2rem;
+  font-family: "Old Standard TT";
+}
+
+.first-letter {
+  font-family: "Old Standard TT";
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.mouse-svg {
+  position: relative;
+  bottom: 12rem;
+  right: 10rem;
+  transform: scale(0.15);
+}
+
+.bottom-text {
+  position: relative;
+  left: 8rem;
+  top: 2rem;
 }
