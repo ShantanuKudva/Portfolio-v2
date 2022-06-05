@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 1.1vw;
+}
+html::-webkit-scrollbar-track {
+  background-color: #2d2d2d;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(168, 166, 166);
+  border-radius: 2rem;
+}
 /* after clicking on the pages, we need to hide only x direction overflow. so, we unset overflow and then add overflow-y to hidden */
 
 body {
@@ -17,6 +27,9 @@ body {
   --terminal-text: #79c431;
   --main-page-background: rgb(51, 51, 51);
   --navbar-color: rgb(168, 166, 166);
+  --green-border: rgb(126, 204, 1);
+  --blue-border: rgb(25, 96, 178);
+  --sand-border: rgb(159, 128, 88);
   overflow: hidden;
   color: var(--color-light);
   background-color: var(--background-dark);
@@ -216,6 +229,15 @@ body {
   cursor: pointer;
 }
 
+.folder-1 > img {
+  width: 4rem;
+  color: var(--navbar-color);
+  pointer-events: all;
+  cursor: pointer;
+  margin: -0.5rem;
+  text-align: left;
+}
+
 .folder-1,
 .folder-2,
 .folder-3 {
@@ -236,13 +258,15 @@ body {
   background-color: whitesmoke;
   position: absolute;
   top: 0;
-  /* right: 0; */
-  /* height: 100vh; */
   width: 100vw;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .portfolio-navbar {
+  z-index: 100000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -284,11 +308,11 @@ body {
 }
 
 .portfolio-content {
-  margin-top: 2rem;
   height: 100vh;
   display: grid;
   margin: 2rem 10rem;
   padding: 1rem;
+  height: 100%;
 }
 
 .right {
@@ -309,8 +333,16 @@ body {
   top: 50px;
 }
 
-.portfolio-img {
-  border: 1px solid blue;
+.sand-border {
+  border: 2px solid var(--sand-border);
+}
+
+.blue-border {
+  border: 2px solid var(--blue-border);
+}
+
+.green-border {
+  border: 2px solid var(--green-border);
 }
 
 .portfolio-para {
@@ -325,15 +357,7 @@ body {
   font-size: 2.5rem;
 }
 
-.mouse-svg {
-  position: relative;
-  bottom: 12rem;
-  right: 10rem;
-  transform: scale(0.15);
-}
-
+.mouse-svg,
 .bottom-text {
-  position: relative;
-  left: 8rem;
-  top: 2rem;
+  text-align: center;
 }
