@@ -25,6 +25,7 @@ const interval = setInterval(() => {
   // Display the date and time on the screen using div#date-time
   document.querySelector(".time").innerHTML = time;
   document.querySelector(".date").innerHTML = date;
+  document.querySelector(".portfolio-date").innerHTML = date;
 }, 1000);
 
 //event listeners
@@ -82,23 +83,24 @@ document.querySelector(".folder-1").addEventListener("click", () => {
   document.body.style.overflowX = "hidden";
 });
 
-document.querySelector(".folder-2").addEventListener("click", () => {
-  document.querySelector(".portfolio").style.opacity = 1;
-  document.querySelector(".portfolio").style.zIndex = 100;
-  document.querySelector(".red").style.cursor = "pointer";
-  document.body.style.overflow = "unset";
-  document.body.style.overflowX = "hidden";
-});
+// document.querySelector(".folder-2").addEventListener("click", () => {
+//   document.querySelector(".portfolio").style.opacity = 1;
+//   document.querySelector(".portfolio").style.zIndex = 100;
+//   document.querySelector(".red").style.cursor = "pointer";
+//   document.body.style.overflow = "unset";
+//   document.body.style.overflowX = "hidden";
+// });
 
-document.querySelector(".folder-3").addEventListener("click", () => {
-  document.querySelector(".portfolio").style.opacity = 1;
-  document.querySelector(".portfolio").style.zIndex = 100;
-  document.querySelector(".red").style.cursor = "pointer";
-  document.body.style.overflow = "unset";
-  document.body.style.overflowX = "hidden";
-});
+// document.querySelector(".folder-3").addEventListener("click", () => {
+//   document.querySelector(".portfolio").style.opacity = 1;
+//   document.querySelector(".portfolio").style.zIndex = 100;
+//   document.querySelector(".red").style.cursor = "pointer";
+//   document.body.style.overflow = "unset";
+//   document.body.style.overflowX = "hidden";
+// });
 
 //remove portfolio
+
 document.querySelector(".red").addEventListener("click", () => {
   document.querySelector(".portfolio").style.opacity = 0;
   document.querySelector(".portfolio").style.zIndex = -100;
@@ -183,4 +185,8 @@ const showLineC = () => {
 
 const showLineD = () => {
   document.querySelector(".para-d").style.opacity = 1;
+};
+
+const showLine = () => {
+  document.querySelector;
 };
