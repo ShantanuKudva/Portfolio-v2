@@ -142,7 +142,7 @@ body {
 
 .navbar {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 2rem;
   display: flex;
   align-items: center;
@@ -275,7 +275,9 @@ body {
 }
 
 .portfolio-main-heading {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 80% 20%;
   justify-content: center;
   align-items: center;
   margin: 6rem;
@@ -339,9 +341,11 @@ body {
   font-family: "Libre Baskerville";
   margin: auto;
   color: black;
-  font-size: 2.3rem;
+  /* font-size: 2.3rem; */
+  font-size: clamp(30px, 5vw, 50px);
   margin-bottom: 2rem;
 }
+
 @media (max-width: 840px) {
   .portfolio-heading {
     margin-top: 10rem;
@@ -360,16 +364,34 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin: 5rem;
   padding: 1rem;
-  height: 100%;
+  /* height: 100%; */
 }
 
+@media (max-width: 520px) {
+  .portfolio-content {
+    margin: clamp(1rem, 1vw, 5rem);
+    padding: clamp(0.5rem, 2vw, 2rem);
+  }
+  .portfolio-img {
+    margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .portfolio-content {
+    margin: 0;
+    padding: 1rem;
+  }
+  .portfolio-img {
+    margin: 0;
+  }
+}
 .right {
   left: -2rem;
   top: 3rem;
 }
 
 .left {
-  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
   left: 2rem;
   top: 3rem;
 }
@@ -388,24 +410,6 @@ body {
   border-radius: 5px;
   position: relative;
 }
-
-/* .fix-img {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 5px;
-  position: relative;
-  left: 3rem;
-  top: 3rem;
-}
-
-.fix-img-content {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 5px;
-  position: relative;
-  left: 5rem;
-  top: 3rem;
-} */
 
 .sand-border {
   border: 2px solid var(--sand-border);
@@ -426,6 +430,7 @@ body {
 .portfolio-para {
   color: rgb(51, 51, 51);
   font-size: 1.2rem;
+  /* font-size: clamp(10px, 2.3rem, 20px); */
   font-family: "Old Standard TT";
 }
 
@@ -433,6 +438,7 @@ body {
   font-family: "Bodoni Moda";
   font-weight: bold;
   font-size: 2.5rem;
+  /* font-size: clamp(20px, 3vw, 40px); */
 }
 
 .mouse-svg,
