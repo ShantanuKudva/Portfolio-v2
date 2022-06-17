@@ -79,8 +79,9 @@ document.querySelector(".folder-1").addEventListener("click", () => {
   document.querySelector(".portfolio").style.opacity = 1;
   document.querySelector(".portfolio").style.zIndex = 100;
   document.querySelector(".red").style.cursor = "pointer";
-  document.body.style.overflow = "unset";
-  document.body.style.overflowX = "hidden";
+  document.documentElement.style.overflow = "unset";
+  document.documentElement.style.overflowX = "hidden";
+  showFourth();
 });
 
 // document.querySelector(".folder-2").addEventListener("click", () => {
@@ -104,8 +105,9 @@ document.querySelector(".folder-1").addEventListener("click", () => {
 document.querySelector(".red").addEventListener("click", () => {
   document.querySelector(".portfolio").style.opacity = 0;
   document.querySelector(".portfolio").style.zIndex = -100;
-  document.querySelector(".red").style.cursor = "default";
-  document.body.style.overflow = "hidden";
+
+  document.documentElement.querySelector(".red").style.cursor = "default";
+  document.documentElement.style.overflow = "hidden";
 });
 //funtions
 const showSecond = () => {

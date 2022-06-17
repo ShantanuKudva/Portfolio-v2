@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -33,7 +34,7 @@ body {
   --black-border: black;
   --project-accent-color: rgb(94, 37, 231);
   --project-background: rgb(17, 18, 19);
-  overflow: hidden;
+
   color: var(--color-light);
   background-color: var(--background-dark);
 }
