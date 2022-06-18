@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   overflow: hidden;
 }
 
@@ -42,7 +45,8 @@ body {
 .opening-page {
   position: relative;
   font-family: "Roboto Mono";
-  height: 100vh;
+  /* width: 100%;
+  height: 100vh; */
   opacity: 1;
   z-index: 1;
 }
@@ -53,7 +57,7 @@ body {
   left: 0;
   font-family: "Roboto Mono";
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   opacity: 0;
   transition: all 0.5s;
   z-index: 1;
@@ -126,7 +130,7 @@ body {
   left: 0;
   opacity: 0;
   pointer-events: none;
-  width: 100vw;
+  width: 100%;
   background-color: var(--main-page-background);
   z-index: -100;
   display: flex;
@@ -144,23 +148,38 @@ body {
 .navbar {
   position: absolute;
   width: 100%;
-  height: 2rem;
-  display: flex;
+  height: 3rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  justify-content: space-between;
-  top: 0;
+  justify-content: space-around;
+  top: -5px;
   left: 0;
-  opacity: 200;
+  opacity: 1;
   background-color: var(--navbar-color);
   color: black;
   font-weight: bold;
   font-family: "Roboto Mono";
 }
 
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    font-size: clamp(0.7rem, 2vw, 2rem);
+  }
+}
+
+@media (min-width: 500px) {
+  .computer-navbar {
+    margin: 0 auto;
+  }
+}
+
 .location {
   pointer-events: none;
-  justify-self: flex-start;
-  margin-left: 4rem;
+  grid-row-start: 1;
+  margin: 0 auto;
 }
 .username {
   pointer-events: none;
@@ -168,29 +187,29 @@ body {
 }
 
 .time {
-  border-right: solid black 0.2rem;
+  /* border-right: solid black 0.2rem;
   border-radius: 2px;
-  padding-right: 0.5rem;
+  padding-right: 0.5rem; */
 }
 
 .time-date {
   pointer-events: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 0.5rem;
-  margin-right: -10rem;
+  grid-column: span 2;
 }
 
 .computer-navbar {
   position: relative;
-  display: flex;
   gap: 1rem;
-  justify-self: flex-end;
+  grid-column-start: 5;
+  margin: 0 auto;
   margin-right: 1rem;
   cursor: pointer;
-  transform: scale(0.05);
-  margin-right: -10rem;
+  transform: scale(0.5);
+  /* margin-right: -10rem; */
 }
 
 .computer-info-dropdown {
@@ -371,14 +390,14 @@ body {
 @media (max-width: 520px) {
   .portfolio-content {
     margin: clamp(1rem, 1vw, 5rem);
-    padding: clamp(0.5rem, 2vw, 2rem);
+    padding: clamp(0.5srem, 2vw, 2rem);
   }
   .portfolio-img {
     margin: 0;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 300px) {
   .portfolio-content {
     margin: 0;
     padding: 1rem;
