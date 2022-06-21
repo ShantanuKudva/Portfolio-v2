@@ -379,6 +379,12 @@ body {
   }
 }
 
+@media (min-width: 1300px) {
+  .portfolio-img {
+    justify-self: center;
+  }
+}
+
 .portfolio-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
