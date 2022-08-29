@@ -9,15 +9,15 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 1.1vw;
+  width: 0;
 }
-html::-webkit-scrollbar-track {
+/* html::-webkit-scrollbar-track {
   background-color: #2d2d2d;
 }
 html::-webkit-scrollbar-thumb {
   background-color: rgb(168, 166, 166);
   border-radius: 2rem;
-}
+} */
 /* after clicking on the pages, we need to hide only x direction overflow. so, we unset overflow and then add overflow-y to hidden */
 
 body {
@@ -321,7 +321,7 @@ body {
 }
 
 .portfolio-navbar {
-  z-index: 100000;
+  z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -340,6 +340,15 @@ body {
   gap: 0.5rem;
 }
 
+/* .portfolio-progress-indicator {
+  position: fixed;
+  top: -0.5rem;
+  left: 0;
+  width: 100%;
+  z-index: 10000000000;
+  height: 2rem;
+  color: black;
+} */
 .red {
   cursor: pointer;
   pointer-events: all;
